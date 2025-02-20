@@ -26,7 +26,7 @@
     background-color:  hsl(353, 100%, 83%);
     background-image:  url("../images/bg-pattern-intro-mobile.svg");
     background-repeat: no-repeat;
-    background-position: 40% 10%;
+    background-position: 40% 20%;
     padding: 3rem 1.5rem;
     border-bottom-left-radius: 100px;
     width: 100%;
@@ -34,6 +34,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
     
   }
 
@@ -66,7 +67,7 @@
   }
   
   .hero h1 {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 1rem;
   }
   
@@ -76,8 +77,9 @@
   
   .cta-buttons {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     justify-content: center;
+    height: 10vh;
   }
   
   .btn {
@@ -111,6 +113,230 @@
   .dropdowns{
     display: none;
   }
-  @media screen and(min-width:1024) {
-    
+  features, .features-alt {
+    padding: 6rem 1.5rem;
+    text-align: center;
+}
+
+.features h2, .features-alt h2 {
+    color: var(--color-secondary);
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.feature-image {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 2rem;
+}
+
+.feature-image.desktop {
+    display: none;
+}
+
+.feature-text h3 {
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-text p {
+    margin-bottom: 2rem;
+}
+.feature-text{
+  display: flex;
+  flex-direction: column; 
+  align-content: center;
+  padding: 2rem;
+}
+
+/* Infrastructure Section */
+.infrastructure {
+    background: var(--gradient-body);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 12rem 1.5rem 6rem;
+    text-align: center;
+    color: var(--color-white);
+    position: relative;
+    margin-top: 12rem;
+}
+
+.phones-image {
+    position: absolute;
+    top: -180px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 375px;
+}
+
+.infrastructure h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-very-dark-black-blue);
+    color: var(--color-white);
+    padding: 4rem 1.5rem;
+    border-top-right-radius: 100px;
+    text-align: center;
+}
+
+footer .logo {
+    margin-bottom: 3rem;
+}
+
+.footer-column {
+    margin-bottom: 2rem;
+}
+
+.footer-column h4 {
+    margin-bottom: 1.5rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: var(--color-grayish-blue);
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    header {
+        padding: 3rem 3rem;
+    }
+    .hero{
+      padding:none;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .btn-primary{
+      align-content: center;
+      align-items: center;
+
+    }
+
+    .feature-content, .features-alt {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        text-align: left;
+    }
+
+    .feature-image.mobile {
+        display: none;
+    }
+   .feature-image.desktop{
+      display: flex;
+    }
+
+
+    .features-alt .feature-image.desktop {
+        order: -1;
+        margin-right: -5rem;
+        margin-left: 0;
+    }
+
+    .infrastructure {
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+
+    .phones-image {
+        position: static;
+        transform: none;
+        flex: 1;
+    }
+
+    .infrastructure-content {
+        flex: 1;
+    }
+
+    footer {
+        text-align: left;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    .nav-buttons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .btn-login {
+        background: none;
+        border: none;
+        color: var(--color-white);
+    }
+
+    .btn-signup {
+        background-color: var(--color-white);
+        color: var(--color-primary);
+        border: none;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    .features{
+      margin-top: 5rem;
+    }
+    .features.h2{
+      margin-top: 40rem;
+
+    }
+    .feature-content{
+      display: flex;
+      gap: 10rem;
+    }
+    .feature-text{
+      justify-content: flex-start;
+    }
+    .feature-image.mobile{
+      display: none;
+
+    }
+    .feature-image.desktop{
+      display: flex;
+      max-width: 100%;
+      height: 100vh;
+    }
+   
+  .infrastructure{
+    display: flex;
+    padding: none;
   }
+}
