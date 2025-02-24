@@ -1,338 +1,391 @@
 * {
-    box-sizing: border-box;
-  }
-:root {
-    --color-primary: hsl(356, 100%, 66%);
-    --color-primary-light: hsl(355, 100%, 74%);
-    --color-secondary: hsl(208, 49%, 24%);
-    --color-white: hsl(0, 0%, 100%);
-    --color-grayish-blue: hsl(240, 2%, 79%);
-    --color-very-dark-grayish-blue: hsl(207, 13%, 34%);
-    --color-very-dark-black-blue: hsl(240, 10%, 16%);
-    --gradient-intro: linear-gradient(135deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
-    --gradient-body: linear-gradient(135deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
-  }
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-family: 'Overpass', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--color-very-dark-grayish-blue);
-  }
-  header {
-    background-color:  hsl(353, 100%, 83%);
-    background-image:  url("../images/bg-pattern-intro-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: 40% 20%;
-    padding: 3rem 1.5rem;
-    border-bottom-left-radius: 100px;
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    
-  }
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 80px;
-  }
-  
-  .menu-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .nav-menu, .nav-buttons {
-    display: none;
-  }
-   /* Hero Section */
-   .hero {
-    text-align: center;
-    color: var(--color-white);
-    /* padding: 6rem 1.5rem; */
-    margin-top: 100px;
-    font-size:20px;
-  }
-  
-  .hero h1 {
-    font-size: 30px;
-    margin-bottom: 1rem;
-  }
-  
-  .hero > p {
-    margin-bottom: 2rem;
-  }
-  
-  .cta-buttons {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    height: 10vh;
-  }
-  
-  .btn {
-    padding: 1rem 2rem;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    font-family: 'Ubuntu', sans-serif;
-  }
-  .btn-login{
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-  
-  .btn-primary {
-    background-color: var(--color-white);
-    color: var(--color-primary);
-    border: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-  
-  .btn-secondary {
-    background-color: transparent;
-    color: var(--color-white);
-    border: 1px solid var(--color-white);
-  }
-  .dropdowns{
-    display: none;
-  }
-  features, .features-alt {
-    padding: 6rem 1.5rem;
-    text-align: center;
+  box-sizing: border-box;
+  margin: 0
 }
 
-.features h2, .features-alt h2 {
-    color: var(--color-secondary);
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+:root {
+  --color-primary: hsl(356, 100%, 66%);
+  --color-primary-light: hsl(355, 100%, 74%);
+  --color-secondary: hsl(208, 49%, 24%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grayish-blue: hsl(240, 2%, 79%);
+  --color-very-dark-grayish-blue: hsl(207, 13%, 34%);
+  --color-very-dark-black-blue: hsl(240, 10%, 16%);
+  --gradient-intro: linear-gradient(135deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  --gradient-body: linear-gradient(135deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-very-dark-grayish-blue);
+}
+
+.container {
+  width: 100%;
+}
+
+header {
+  background: var(--gradient-intro), url("../images/bg-pattern-intro-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 40% 20%;
+  padding: 3rem 1.5rem;
+  border-bottom-left-radius: 100px;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-menu,
+.nav-buttons {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  color: var(--color-white);
+  /* padding: 6rem 1.5rem; */
+  justify-self: center;
+  font-size: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero>h1 {
+  font-size: 30px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero>p {
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn {
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.btn-login {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: none;
+  font-size: 13px;
+  flex-basis: 50%;
+  flex-basis: 50%;
+  padding: 1rem 1rem;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  font-size: 13px;
+  text-align: center;
+  flex-basis: 50%;
+  padding: 1rem 1rem;
+}
+
+.dropdowns {
+  display: none;
+}
+
+features,
+.features-alt {
+  padding: 6rem 1.5rem;
+  text-align: center;
+}
+
+.features h2,
+.features-alt h2 {
+  color: var(--color-secondary);
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .feature-image {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 2rem;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 2rem;
 }
 
 .feature-image.desktop {
-    display: none;
+  display: none;
 }
 
 .feature-text h3 {
-    color: var(--color-secondary);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: center;
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .feature-text p {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
-.feature-text{
+
+.feature-text {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-content: center;
   padding: 2rem;
 }
 
 /* Infrastructure Section */
 .infrastructure {
-    background: var(--gradient-body);
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 100px;
-    padding: 12rem 1.5rem 6rem;
-    text-align: center;
-    color: var(--color-white);
-    position: relative;
-    margin-top: 12rem;
+  background: var(--gradient-body);
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  padding: 12rem 1.5rem 6rem;
+  text-align: center;
+  color: var(--color-white);
+  position: relative;
+  margin-top: 12rem;
 }
 
 .phones-image {
-    position: absolute;
-    top: -180px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 375px;
+  position: absolute;
+  top: -180px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 375px;
 }
 
 .infrastructure h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* Footer */
 footer {
-    background-color: var(--color-very-dark-black-blue);
-    color: var(--color-white);
-    padding: 4rem 1.5rem;
-    border-top-right-radius: 100px;
-    text-align: center;
+  background-color: var(--color-very-dark-black-blue);
+  color: var(--color-white);
+  padding: 4rem 1.5rem;
+  border-top-right-radius: 100px;
+  text-align: center;
 }
 
 footer .logo {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .footer-column {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .footer-column h4 {
-    margin-bottom: 1.5rem;
-    font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 1.5rem;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .footer-column ul {
-    list-style: none;
+  list-style: none;
 }
 
 .footer-column ul li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-column ul li a {
-    color: var(--color-grayish-blue);
-    text-decoration: none;
+  color: var(--color-grayish-blue);
+  text-decoration: none;
 }
 
 /* Responsive Design */
 @media (min-width: 768px) {
-    header {
-        padding: 3rem 3rem;
-    }
-    .hero{
-      padding:none;
-    }
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    .btn-primary{
-      align-content: center;
-      align-items: center;
+  header {
+    padding: 3rem 3rem;
+  }
 
-    }
+  .hero {
+    padding: none;
+  }
 
-    .feature-content, .features-alt {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        text-align: left;
-    }
+  .hero h1 {
+    font-size: 2.5rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
 
-    .feature-image.mobile {
-        display: none;
-    }
-   .feature-image.desktop{
-      display: flex;
-    }
+  .btn-primary,
+  .btn-secondary {
+    flex-basis: 150px;
+  }
+
+  .btn-primary:hover {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-white)
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 1px solid transparent
+  }
+
+  .bt .feature-content,
+  .features-alt {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: left;
+  }
+
+  .feature-image.mobile {
+    display: none;
+  }
+
+  .feature-image.desktop {
+    display: flex;
+  }
 
 
-    .features-alt .feature-image.desktop {
-        order: -1;
-        margin-right: -5rem;
-        margin-left: 0;
-    }
+  .features-alt .feature-image.desktop {
+    order: -1;
+    margin-right: -5rem;
+    margin-left: 0;
+  }
 
-    .infrastructure {
-        text-align: left;
-        display: flex;
-        align-items: center;
-    }
+  .infrastructure {
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
 
-    .phones-image {
-        position: static;
-        transform: none;
-        flex: 1;
-    }
+  .phones-image {
+    position: static;
+    transform: none;
+    flex: 1;
+  }
 
-    .infrastructure-content {
-        flex: 1;
-    }
+  .infrastructure-content {
+    flex: 1;
+  }
 
-    footer {
-        text-align: left;
-    }
+  footer {
+    text-align: left;
+  }
 
-    .footer-links {
-        display: flex;
-        justify-content: space-between;
-    }
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 1024px) {
-    .menu-toggle {
-        display: none;
-    }
+  .menu-toggle {
+    display: none;
+  }
 
-    .nav-menu {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-    }
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
 
-    .nav-buttons {
-        display: flex;
-        gap: 1rem;
-    }
+  .nav-buttons {
+    display: flex;
+    gap: 1rem;
+  }
 
-    .btn-login {
-        background: none;
-        border: none;
-        color: var(--color-white);
-    }
+  .btn-login {
+    background: none;
+    border: none;
+    color: var(--color-white);
+  }
 
-    .btn-signup {
-        background-color: var(--color-white);
-        color: var(--color-primary);
-        border: none;
-    }
+  .btn-signup {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: none;
+  }
 
-    .hero h1 {
-        font-size: 3.5rem;
-    }
-    .features{
-      margin-top: 5rem;
-    }
-    .features.h2{
-      margin-top: 40rem;
+  .hero h1 {
+    font-size: 3.5rem;
+  }
 
-    }
-    .feature-content{
-      display: flex;
-      gap: 10rem;
-    }
-    .feature-text{
-      justify-content: flex-start;
-    }
-    .feature-image.mobile{
-      display: none;
+  .features {
+    margin-top: 5rem;
+  }
 
-    }
-    .feature-image.desktop{
-      display: flex;
-      max-width: 100%;
-      height: 100vh;
-    }
-   
+  .features.h2 {
+    margin-top: 40rem;
+
+  }
+
+  .feature-content {
+    display: flex;
+    gap: 10rem;
+  }
+
+  .feature-text {
+    justify-content: flex-start;
+  }
+
+  .feature-image.mobile {
+    display: none;
+
+  }
+
+  .feature-image.desktop {
+    display: flex;
+    max-width: 100%;
+    height: 100vh;
+  }
+
+  .infrastructure {
+    display: flex;
+    padding: none;
+  }
 }
